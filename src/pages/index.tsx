@@ -1,8 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
+// import components
+import Card from "@/components/card";
 
 export default function Home() {
+  const data = [
+    { title: "Title 1", description: "Lorem 1" },
+    { title: "Title 2", description: "Lorem 2" },
+    { title: "Title 3", description: "Lorem 3" },
+    { title: "Title 4", description: "Lorem 4" },
+    { title: "Title 5", description: "Lorem 5" },
+  ];
   return (
     <>
       <Head>
@@ -12,8 +21,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Home
-        <Link href="/about">About</Link>
+        <h1>Home</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/news">News</Link>
+            </li>
+            <li></li>
+          </ul>
+        </nav>
+        {data.map((e: any) => {
+          return <Card data={e} key={e} />;
+        })}
+        {/* <Card />
+        <Card />
+        <Card />
+        <Card /> */}
       </main>
     </>
   );
