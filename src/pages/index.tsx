@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 // import components
 import Card from "@/components/card";
+import Banner from "@/components/banner";
 // modules
 import { Server } from "@/modules/server";
 
@@ -46,6 +48,12 @@ export default function Home() {
     }
   }, [number]);
 
+  //functions
+  const reverseProps = (data: string) => {
+    console.log("Reverse props! Worked");
+    console.log(data);
+  };
+
   return (
     <>
       <Head>
@@ -54,6 +62,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Banner
+        reverseProps={reverseProps}
+        title="Test Baner"
+        description="Lorem Ipsum"
+      ></Banner>
       <main>
         <h1>Home</h1>
         <nav>
