@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <header className={s.header}>
-        <h1>Logo</h1>
+        <Link href="/">Logo</Link>
         <div className={s.header__search}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,26 +68,30 @@ const Header = () => {
             <li>
               <Link href="#">Контакти</Link>
             </li>
-            <li>
-              <Link href="#">
-                UA
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="10"
-                  viewBox="0 0 16 10"
-                  fill="none"
-                >
-                  <path
-                    d="M15 1.5L8 8.5L1 1.5"
-                    stroke="#200E32"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </Link>
-            </li>
+          </ul>
+        </nav>
+        <div className={s.header__lang}>
+          <Link href="#">
+            UA
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="10"
+              viewBox="0 0 16 10"
+              fill="none"
+            >
+              <path
+                d="M15 1.5L8 8.5L1 1.5"
+                stroke="#200E32"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </Link>
+        </div>
+        <nav>
+          <ul className={s.header__cart}>
             <li>
               <Link href="#">
                 <Image src={imgHeart} width={18} height={18} alt=""></Image>
@@ -98,11 +102,11 @@ const Header = () => {
                 <Image src={imgBuy} width={18} height={18} alt=""></Image>
               </Link>
             </li>
-            <li>
-              <button>Вхід</button>
-            </li>
           </ul>
         </nav>
+        <div className={s.header__login}>
+          <Link href="#">Вхід</Link>
+        </div>
       </header>
     </>
   );
