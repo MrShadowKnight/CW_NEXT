@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ReactDOM from "react-dom";
+import $ from "jquery";
 // import image
 import imgHeart from "../../assets/img/Heart.png";
 import imgBuy from "../../assets/img/Buy.png";
@@ -20,10 +22,10 @@ const Header = () => {
           <Image src={imgSearch} width={24} height={24} alt=""></Image>
           <input type="text" />
         </div>
-        <nav>
-          <ul className={s.header__menu}>
+        <nav className={s.header__menu}>
+          <ul>
             <li>
-              <Link href="/catalog">
+              <Link href="/products">
                 Товари
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +88,47 @@ const Header = () => {
         </nav>
         <div className={s.header__login}>
           <Link href="/login">Вхід</Link>
+        </div>
+
+        {/* Burger menu */}
+
+        <div className={s.navigation}>
+          <input
+            type="checkbox"
+            className="navigation__checkbox"
+            id="navi-toggle"
+          />
+
+          <label className={s.navigation__button} htmlFor="navi-toggle">
+            <span className={s.navigation__icon}>&nbsp;</span>
+          </label>
+
+          <div className={s.navigation__background}>&nbsp;</div>
+
+          <nav className={s.navigation__nav}>
+            <ul className={s.navigation__list}>
+              <li className={s.navigation__item}>
+                <Link href="/products" className={s.navigation__link}>
+                  Товари
+                </Link>
+              </li>
+              <li className={s.navigation__item}>
+                <Link href="/about" className={s.navigation__link}>
+                  Про нас
+                </Link>
+              </li>
+              <li className={s.navigation__item}>
+                <Link href="/contact" className={s.navigation__link}>
+                  Контакти
+                </Link>
+              </li>
+              <li className={s.navigation__item}>
+                <Link href="/login" className={s.navigation__link}>
+                  Вхід
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
     </>

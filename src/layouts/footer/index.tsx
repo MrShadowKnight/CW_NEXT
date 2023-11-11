@@ -146,6 +146,42 @@ const Footer = () => {
                     </ul>
                   </nav>
                 </div>
+                <div className={s.footer__box_mobail_social}>
+                  <nav className={s.footer__mobail_social}>
+                    <ul>
+                      <li>
+                        <Link href="#">
+                          <Image
+                            src={imgFacebook}
+                            width={27}
+                            height={27}
+                            alt=""
+                          ></Image>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#">
+                          <Image
+                            src={imgInstagram}
+                            width={27}
+                            height={27}
+                            alt=""
+                          ></Image>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#">
+                          <Image
+                            src={imgTelegram}
+                            width={27}
+                            height={27}
+                            alt=""
+                          ></Image>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </Col>
           </Row>
