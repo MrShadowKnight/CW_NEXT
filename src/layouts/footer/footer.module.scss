@@ -18,4 +18,75 @@
       gap: 130px;
     }
   }
+  &__social {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      li {
+        list-style: none;
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-family: Inter;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__products {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-family: Inter;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__contact {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      li {
+        list-style: none;
+        color: #fff;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-family: Inter;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
