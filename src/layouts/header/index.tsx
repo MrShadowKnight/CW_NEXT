@@ -4,6 +4,8 @@ import Image from "next/image";
 // import image
 import imgHeart from "../../assets/img/Heart.png";
 import imgBuy from "../../assets/img/Buy.png";
+import imgLogo from "../../assets/img/Logo.png";
+import imgSearch from "../../assets/img/Search.png";
 // import styles
 import s from "./header.module.scss";
 
@@ -11,39 +13,17 @@ const Header = () => {
   return (
     <>
       <header className={s.header}>
-        <Link href="/">Logo</Link>
+        <Link href="/">
+          <Image src={imgLogo} width={74} height={36} alt=""></Image>
+        </Link>
         <div className={s.header__search}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
-            fill="none"
-          >
-            <ellipse
-              cx="9.86616"
-              cy="9.76663"
-              rx="9.01674"
-              ry="8.98856"
-              stroke="#200E32"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M16.1375 16.4851L19.6725 20"
-              stroke="#200E32"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <Image src={imgSearch} width={24} height={24} alt=""></Image>
           <input type="text" />
         </div>
         <nav>
           <ul className={s.header__menu}>
             <li>
-              <Link href="#">
+              <Link href="/catalog">
                 Товари
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +35,9 @@ const Header = () => {
                   <path
                     d="M15 1.5L8 8.5L1 1.5"
                     stroke="#200E32"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </Link>
@@ -66,7 +46,7 @@ const Header = () => {
               <Link href="/about">Про нас</Link>
             </li>
             <li>
-              <Link href="#">Контакти</Link>
+              <Link href="/contact">Контакти</Link>
             </li>
           </ul>
         </nav>
@@ -83,9 +63,9 @@ const Header = () => {
               <path
                 d="M15 1.5L8 8.5L1 1.5"
                 stroke="#200E32"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Link>
@@ -93,19 +73,19 @@ const Header = () => {
         <nav>
           <ul className={s.header__cart}>
             <li>
-              <Link href="#">
+              <Link href="/favorites">
                 <Image src={imgHeart} width={18} height={18} alt=""></Image>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/basket">
                 <Image src={imgBuy} width={18} height={18} alt=""></Image>
               </Link>
             </li>
           </ul>
         </nav>
         <div className={s.header__login}>
-          <Link href="#">Вхід</Link>
+          <Link href="/login">Вхід</Link>
         </div>
       </header>
     </>

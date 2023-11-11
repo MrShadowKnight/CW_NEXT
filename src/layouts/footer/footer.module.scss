@@ -1,3 +1,21 @@
 .footer {
   background-color: #000;
+  padding: 61px 0;
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 116px;
+    &_logo {
+      display: flex;
+      flex-direction: row;
+      gap: 106px;
+    }
+    &_nav {
+      display: flex;
+      flex-direction: row;
+      gap: 130px;
+    }
+  }
 }

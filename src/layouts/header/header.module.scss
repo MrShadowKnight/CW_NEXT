@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding: 14px 0;
   a {
     color: #000;
     font-family: Inter;
@@ -24,6 +25,7 @@
       margin-right: 10px;
     }
     input {
+      width: 287px;
       border: none;
       background-color: #ebebeb;
     }
@@ -44,6 +46,11 @@
           font-family: Inter;
           font-size: 18px;
           font-weight: 500;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
           svg {
             margin-left: 5px;
           }
