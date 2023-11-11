@@ -4,18 +4,16 @@
   &__box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: row;
-    gap: 116px;
+    justify-content: space-between;
     &_logo {
       display: flex;
       flex-direction: row;
-      gap: 106px;
     }
     &_nav {
       display: flex;
       flex-direction: row;
-      gap: 130px;
+      gap: 129px;
     }
   }
   &__social {

@@ -5,13 +5,13 @@ import Image from "next/image";
 import s from "./footer.module.scss";
 import { Container, Row, Col } from "react-bootstrap";
 // import images
-import imgLogo from "../../assets/img/Logo-FFF.png";
-import imgTelegram from "../../assets/img/Telegram.png";
-import imgInstagram from "../../assets/img/Instagram.png";
-import imgFacebook from "../../assets/img/Facebook.png";
-import imgTimeCircle from "../../assets/img/Time Circle.png";
-import imgMail from "../../assets/img/Message.png";
-import imgCall from "../../assets/img/Call.png";
+import imgLogo from "@/assets/img/Logo-FFF.png";
+import imgTelegram from "@/assets/img/Telegram.png";
+import imgInstagram from "@/assets/img/Instagram.png";
+import imgFacebook from "@/assets/img/Facebook.png";
+import imgTimeCircle from "@/assets/img/Time Circle.png";
+import imgMail from "@/assets/img/Message.png";
+import imgCall from "@/assets/img/Call.png";
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
           <Row>
             <Col>
               <div className={s.footer__box}>
-                <div className={s.footer__box_logo}>
+                <div className={s.footer__box_social}>
                   <nav className={s.footer__social}>
                     <ul>
                       <li>
@@ -56,6 +56,8 @@ const Footer = () => {
                       </li>
                     </ul>
                   </nav>
+                </div>
+                <div className={s.footer__box_logo}>
                   <div className={s.footer__logo}>
                     <Link href="/">
                       <Image
@@ -103,6 +105,8 @@ const Footer = () => {
                       </li>
                     </ul>
                   </nav>
+                </div>
+                <div className={s.footer__box_contact}>
                   <nav className={s.footer__contact}>
                     <ul>
                       <li>
