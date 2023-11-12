@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ReactDOM from "react-dom";
-import $ from "jquery";
 // import image
 import imgHeart from "../../assets/img/Heart.png";
 import imgBuy from "../../assets/img/Buy.png";
@@ -12,6 +10,20 @@ import imgSearch from "../../assets/img/Search.png";
 import s from "./header.module.scss";
 
 const Header = () => {
+  // function
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
   return (
     <>
       <header className={s.header}>
@@ -92,40 +104,49 @@ const Header = () => {
 
         {/* Burger menu */}
 
-        <div className={s.navigation}>
-          <input
-            type="checkbox"
-            className="navigation__checkbox"
-            id="navi-toggle"
-          />
+        <div
+          className={`${s.header__burger} ${isMenuOpen ? s.lineCross : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className={`${s.header__line}`}></div>
+          <div className={`${s.header__line}`}></div>
+          <div className={`${s.header__line}`}></div>
+        </div>
 
-          <label className={s.navigation__button} htmlFor="navi-toggle">
-            <span className={s.navigation__icon}>&nbsp;</span>
-          </label>
-
-          <div className={s.navigation__background}>&nbsp;</div>
-
-          <nav className={s.navigation__nav}>
-            <ul className={s.navigation__list}>
-              <li className={s.navigation__item}>
-                <Link href="/products" className={s.navigation__link}>
+        <div
+          className={s.header__mobileMenu}
+          style={isMenuOpen ? { left: "0%" } : { left: "-100%" }}
+        >
+          <nav>
+            <ul>
+              <li onClick={() => setIsMenuOpen(false)}>
+                <Link href="/products">
                   Товари
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="10"
+                    viewBox="0 0 16 10"
+                    fill="none"
+                  >
+                    <path
+                      d="M15 1.5L8 8.5L1 1.5"
+                      stroke="#200E32"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </Link>
               </li>
-              <li className={s.navigation__item}>
-                <Link href="/about" className={s.navigation__link}>
-                  Про нас
-                </Link>
+              <li onClick={() => setIsMenuOpen(false)}>
+                <Link href="/about">Про нас</Link>
               </li>
-              <li className={s.navigation__item}>
-                <Link href="/contact" className={s.navigation__link}>
-                  Контакти
-                </Link>
+              <li onClick={() => setIsMenuOpen(false)}>
+                <Link href="/сontact">Контакти</Link>
               </li>
-              <li className={s.navigation__item}>
-                <Link href="/login" className={s.navigation__link}>
-                  Вхід
-                </Link>
+              <li onClick={() => setIsMenuOpen(false)}>
+                <Link href="/login">Вхід</Link>
               </li>
             </ul>
           </nav>
