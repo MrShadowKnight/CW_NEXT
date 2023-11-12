@@ -1,0 +1,73 @@
+.form {
+  &__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 75%;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #000;
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    input {
+      border: none;
+      border-bottom: #000 1px solid;
+      &::placeholder {
+        color: #a5a5a5cc;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 20%;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+    h1 {
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      @media screen and (max-width: 992px) {
+        order: 1;
+        font-size: 24px;
+      }
+      @media screen and (max-width: 580px) {
+        font-size: 18px;
+      }
+    }
+    input {
+      display: inline-flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      color: #000;
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 15px;
+      background: #ffba08;
+    }
+  }
+}
